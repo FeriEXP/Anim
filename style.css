@@ -13,6 +13,18 @@ header {
   padding: 1rem 0;
 }
 
+header label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+header select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 #anime-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
