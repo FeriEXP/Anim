@@ -11,24 +11,54 @@
     <h1>Anime Stream</h1>
     <p>Tempat nonton anime kesayangan kamu!</p>
     
-    <!-- Dropdown Pilih Genre -->
-    <label for="genre-select">Pilih Genre:</label>
-    <select id="genre-select">
-      <option value="all">Semua</option>
-      <option value="action">Action</option>
-      <option value="adventure">Adventure</option>
-      <option value="comedy">Comedy</option>
-    </select>
-    
-    <!-- Input Cari Anime -->
-    <label for="search-input">Cari Anime:</label>
-    <input type="text" id="search-input" placeholder="Cari Anime..." />
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#schedule">Jadwal Tayang</a></li>
+        <li><a href="#history">Riwayat Nonton</a></li>
+      </ul>
+    </nav>
   </header>
+
   <main>
-    <section id="anime-list">
-      <!-- Daftar anime akan dimasukkan di sini -->
+    <!-- Beranda -->
+    <section id="home">
+      <h2>Beranda</h2>
+      <p>Selamat datang di Anime Stream! Pilih genre atau cari anime favoritmu.</p>
+      
+      <label for="genre-select">Pilih Genre:</label>
+      <select id="genre-select">
+        <option value="all">Semua</option>
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="comedy">Comedy</option>
+      </select>
+      
+      <label for="search-input">Cari Anime:</label>
+      <input type="text" id="search-input" placeholder="Cari Anime..." />
+      
+      <div id="anime-list">
+        <!-- Daftar anime akan dimasukkan di sini -->
+      </div>
+    </section>
+
+    <!-- Jadwal Tayang -->
+    <section id="schedule">
+      <h2>Jadwal Tayang</h2>
+      <ul id="schedule-list">
+        <!-- Jadwal tayang anime akan dimasukkan di sini -->
+      </ul>
+    </section>
+
+    <!-- Riwayat Nonton -->
+    <section id="history">
+      <h2>Riwayat Nonton</h2>
+      <ul id="history-list">
+        <!-- Riwayat nonton anime akan dimasukkan di sini -->
+      </ul>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
