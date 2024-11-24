@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Attack on Titan",
+    "image": "https://via.placeholder.com/200x300?text=Attack+on+Titan",
+    "link": "https://example.com/attack-on-titan"
+  },
+  {
+    "title": "Demon Slayer",
+    "image": "https://via.placeholder.com/200x300?text=Demon+Slayer",
+    "link": "https://example.com/demon-slayer"
+  },
+  {
+    "title": "One Piece",
+    "image": "https://via.placeholder.com/200x300?text=One+Piece",
+    "link": "https://example.com/one-piece"
+  }
+]
