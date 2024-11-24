@@ -29,12 +29,17 @@ const animeList = [
 // DOM Elements
 const animeListSection = document.getElementById("anime-list");
 const genreSelect = document.getElementById("genre-select");
+const searchInput = document.getElementById("search-input");
 
 // Fungsi untuk menampilkan anime
-function displayAnime(filterGenre = "all") {
+function displayAnime(filterGenre = "all", searchQuery = "") {
   animeListSection.innerHTML = ""; // Hapus konten sebelumnya
   animeList
-    .filter(anime => filterGenre === "all" || anime.genre === filterGenre)
+    .filter(anime => {
+      const genreMatch = filterGenre === "all" || anime.genre === filterGenre;
+      const titleMatch = anime.title.toLowerCase().includes(searchQuery.toLowerCase());
+      return genreMatch && titleMatch;
+    })
     .forEach(anime => {
       const animeCard = document.createElement("div");
       animeCard.className = "anime-card";
@@ -51,7 +56,12 @@ function displayAnime(filterGenre = "all") {
 
 // Event Listener untuk dropdown genre
 genreSelect.addEventListener("change", (e) => {
-  displayAnime(e.target.value);
+  displayAnime(e.target.value, searchInput.value);
+});
+
+// Event Listener untuk input pencarian
+searchInput.addEventListener("input", (e) => {
+  displayAnime(genreSelect.value, e.target.value);
 });
 
 // Tampilkan semua anime saat halaman dimuat
