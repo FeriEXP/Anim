@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anime Stream</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Anime Stream</h1>
-    <p>Tempat nonton anime kesayangan kamu!</p>
-    
+    <p>Nonton anime favoritmu, kapan saja, di mana saja!</p>
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
         <li><a href="#schedule">Jadwal Tayang</a></li>
         <li><a href="#history">Riwayat Nonton</a></li>
+        <li id="auth-nav"></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Beranda -->
     <section id="home">
-      <h2>Beranda</h2>
-      <p>Selamat datang di Anime Stream! Pilih genre atau cari anime favoritmu.</p>
-      
-      <label for="genre-select">Pilih Genre:</label>
-      <select id="genre-select">
-        <option value="all">Semua</option>
-        <option value="action">Action</option>
-        <option value="adventure">Adventure</option>
-        <option value="comedy">Comedy</option>
-      </select>
-      
-      <label for="search-input">Cari Anime:</label>
-      <input type="text" id="search-input" placeholder="Cari Anime..." />
-      
-      <div id="anime-list">
-        <!-- Daftar anime akan dimasukkan di sini -->
+      <div class="hero">
+        <div class="hero-content">
+          <h2>Selamat Datang di Dunia Anime</h2>
+          <p>Temukan anime terbaru dan tonton langsung dari perangkatmu. Ayo mulai petualanganmu sekarang!</p>
+          <button onclick="showLoginForm()">Login</button>
+          <button onclick="showSignupForm()">Daftar</button>
+        </div>
+        <div class="hero-image">
+          <img src="https://via.placeholder.com/400x300" alt="Anime poster">
+        </div>
       </div>
     </section>
 
-    <!-- Jadwal Tayang -->
-    <section id="schedule">
-      <h2>Jadwal Tayang</h2>
-      <ul id="schedule-list">
-        <!-- Jadwal tayang anime akan dimasukkan di sini -->
-      </ul>
-    </section>
-
-    <!-- Riwayat Nonton -->
-    <section id="history">
-      <h2>Riwayat Nonton</h2>
-      <ul id="history-list">
-        <!-- Riwayat nonton anime akan dimasukkan di sini -->
-      </ul>
+    <section id="features">
+      <h2>Kenapa Memilih Kami?</h2>
+      <div class="features-container">
+        <div class="feature-item">
+          <h3>Anime Terbaru</h3>
+          <p>Streaming episode terbaru langsung setelah rilis.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Koleksi Lengkap</h3>
+          <p>Ribuan judul anime dari berbagai genre tersedia di sini.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Tanpa Batas</h3>
+          <p>Tonton kapan saja, di mana saja tanpa gangguan.</p>
+        </div>
+      </div>
     </section>
   </main>
 
